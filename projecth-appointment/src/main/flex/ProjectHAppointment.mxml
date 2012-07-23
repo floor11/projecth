@@ -16,7 +16,7 @@
 		<!-- Place non-visual elements (e.g., services, value objects) here -->
 	</fx:Declarations>
 	
-	<fx:Script source="scripts/ProjectHCatalog.as" />
+	<fx:Script source="scripts/ProjectHAppointment.as" />
 	
 	<s:SkinnableDataContainer itemRenderer="ProductItemRenderer" width="100%" height="100%"> 
 		<s:layout>

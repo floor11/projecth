@@ -1,0 +1,89 @@
+
+	<products>
+
+		<product>
+			<Name>Dylan Velvet Trouser</Name>
+			<Picture_URL__c></Picture_URL__c>
+			<Additional_Informations__c >
+black wool mohair with black velvet detail
+velvet waistband 
+tab and zip closure 
+two side slash pockets and two button welt back pockets
+100% wool 
+19cm leg opening width
+			</Additional_Informations__c >
+			<Initial_Price__c>$450.00</Initial_Price__c>
+			<Family>Ready to Wear</Family>
+		</product>
+
+		<product>
+			<Name>Palma Jacket</Name>
+			<Picture_URL__c></Picture_URL__c>
+			<Additional_Informations__c >
+dark grey classic wool flannel
+notch lapel
+horn web two-button closure
+button cuffs
+chest slash pocket and two front patch flap pockets
+white lining
+			</Additional_Informations__c>
+			<Initial_Price__c>$925.00</Initial_Price__c>
+			<Family>Ready to Wear</Family>
+		</product>
+
+		<product>
+			<Name>Pareos</Name>
+			<Picture_URL__c></Picture_URL__c>
+			<Additional_Informations__c ></Additional_Informations__c>
+			<Initial_Price__c>$260.00</Initial_Price__c>
+			<Family>Ready to Wear</Family>
+		</product>
+
+		<product>
+			<Name>Bow ballerina flat</Name>
+			<Picture_URL__c></Picture_URL__c>
+			<Additional_Informations__c >
+black micro guccissima suede with black suede trim
+Made in Italy
+heel loop pull
+rubber sole
+			</Additional_Informations__c>
+			<Initial_Price__c>$55.00</Initial_Price__c>
+			<Family>Ready to Wear</Family>
+		</product>
+
+		<product>
+			<Name>Horse heads detail halter top</Name>
+			<Picture_URL__c></Picture_URL__c>
+			<Additional_Informations__c >
+black crepe viscose jersey
+metal horse heads ring detail at halter neckline
+100% viscose
+			</Additional_Informations__c>
+			<Initial_Price__c>$30.00</Initial_Price__c>
+			<Family>Ready to Wear</Family>
+		</product>
+		
+		<product>
+			<Name>Pencil Skirt</Name>
+			<Picture_URL__c></Picture_URL__c>
+			<Additional_Informations__c >
+black stretch cady
+adjustable self belt waist with leather buckle
+back zip closure
+lined
+49% viscose, 48% acetate and 3% elastane
+			</Additional_Informations__c>
+			<Initial_Price__c>$150.00</Initial_Price__c>
+			<Family>Ready to Wear</Family>
+		</product>
+
+		<product>
+			<Name>Aupa</Name>
+			<Picture_URL__c></Picture_URL__c>
+			<Additional_Informations__c >Eau de Toilette</Additional_Informations__c>
+			<Initial_Price__c>$160.50</Initial_Price__c>
+			<Family>Ready to Wear</Family>
+		</product>
+
+	</products>
