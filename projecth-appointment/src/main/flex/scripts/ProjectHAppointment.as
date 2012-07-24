@@ -55,6 +55,8 @@ private function initialiseUI():void{
 	
 	shopsComponent.addEventListener(Event.CHANGE, onShopChange);
 	
+	assistantsComponent.addEventListener(Event.CHANGE, onAssistantChange);
+	
 	//récupération des sales assistants
 	//assistantsDataStore = backoffice.retrieveAssistants();
 }
@@ -78,9 +80,6 @@ private function onShopChange(event:Event):void{
 		assistantsDataStore = assistants;
 		//reactivation des composants
 		assistantsComponent.enabled = true;
-		subjectComponent.enabled = true;
-		dateComponent.enabled = true;
-		submit.enabled = true;
 		
 		//fin du curseur "chargement"
 		CursorManager.removeBusyCursor();
@@ -88,3 +87,17 @@ private function onShopChange(event:Event):void{
 	});
 }
 
+/**
+ * Callback au changement de valeurs du composant Assistant 
+ * @param event
+ * 
+ */
+private function onAssistantChange(event:Event):void{
+	
+	//reactivation des composants
+	subjectComponent.enabled = true;
+	dateComponent.enabled = true;
+	hourComponent.enabled = true;
+	submit.enabled = true;
+	
+}

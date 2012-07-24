@@ -12,21 +12,40 @@
 	
 	
 	<s:VGroup horizontalAlign="center" y="50" width="100%" height="100%">
-		<s:Panel x="298" width="360" height="406" title="Rendez-vous" >
+		<s:Panel x="298" width="360" height="368" title="Rendez-vous" >
 			
-			<s:Label x="20" y="69" fontSize="13" fontWeight="bold" text="Boutique"/>
-			<s:ComboBox id="shopsComponent" x="152" y="63" width="168" labelField="Name" dataProvider="{shopsDataStore}" enabled="false" />
+			<s:Label x="20" y="29" fontSize="13" fontWeight="bold" text="Boutique"/>
+			<s:ComboBox id="shopsComponent" x="152" y="23" width="168" labelField="Name" dataProvider="{shopsDataStore}" enabled="false" />
 			
-			<s:Label x="20" y="118" fontSize="13" fontWeight="bold" text="Beauty assistant" />
-			<s:ComboBox id="assistantsComponent" x="152" y="112" width="167" labelField="Name" dataProvider="{assistantsDataStore}" enabled="false" />
+			<s:Label x="20" y="69" fontSize="13" fontWeight="bold" text="Beauty assistant" />
+			<s:ComboBox id="assistantsComponent" x="152" y="63" width="167" labelField="Name" dataProvider="{assistantsDataStore}" enabled="false" />
 			
-			<s:Label x="20" y="167" fontSize="13" fontWeight="bold" text="Sujet" />
-			<s:TextArea id="subjectComponent" x="152" y="160" width="166" height="71" enabled="false"/>
+			<s:Label x="20" y="110" fontSize="13" fontWeight="bold" text="Sujet" />
+			<s:TextArea id="subjectComponent" x="152" y="103" width="166" height="71" enabled="false"/>
 			
-			<s:Label x="20" y="261" fontSize="13" fontWeight="bold" text="Date souhaitée"/>
-			<mx:DateField id="dateComponent" x="152" y="254" width="133" enabled="false"/>
+			<s:Label x="20" y="199" fontSize="13" fontWeight="bold" text="Date souhaitée"/>
+			<mx:DateField id="dateComponent" x="152" y="192" width="133" enabled="false"/>
 			
-			<s:Button id="submit" x="152" y="302" label="Envoyer" enabled="false"/>
+			<s:Label x="21" y="239" fontSize="13" fontWeight="bold" text="Heure souhaitée"/>
+			<s:ComboBox id="hourComponent" x="152" y="233" width="168" enabled="false" >
+				<s:dataProvider>
+					<mx:ArrayList>
+						<fx:String>10:00 - 11:00</fx:String>
+						<fx:String>11:00 - 12:00</fx:String>
+						<fx:String>12:00 - 13:00</fx:String>
+						<fx:String>13:00 - 14:00</fx:String>
+						<fx:String>14:00 - 15:00</fx:String>
+						<fx:String>15:00 - 16:00</fx:String>
+						<fx:String>16:00 - 17:00</fx:String>
+						<fx:String>17:00 - 18:00</fx:String>
+						<fx:String>18:00 - 19:00</fx:String>
+					</mx:ArrayList>
+				</s:dataProvider>	
+			</s:ComboBox>
+			
+			
+			<s:Button id="submit" x="149" y="288" label="Envoyer" enabled="false"/>
+			
 			
 		</s:Panel>
 	</s:VGroup>
