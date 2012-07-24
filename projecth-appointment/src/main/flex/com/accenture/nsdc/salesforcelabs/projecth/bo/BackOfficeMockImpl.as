@@ -32,13 +32,22 @@ package com.accenture.nsdc.salesforcelabs.projecth.bo
 		
 		/**
 		 * Constructeur.
-		 * Initialisation des listes statiques
 		 * 
 		 */
 		public function BackOfficeMockImpl()
 		{
+		}
+		
+		/**
+		 * @inheritDoc
+		 */
+		public function initialise(onInitialised:Function):void{
+			//Initialisation des listes statiques
 			shopsList = fileToDatastore(shopsFile);
 			assistantsList = fileToDatastore(assistantsFile);
+			
+			//execution de la methode callback
+			onInitialised();
 		}
 		
 		/**

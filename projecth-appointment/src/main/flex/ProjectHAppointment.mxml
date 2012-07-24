@@ -15,18 +15,18 @@
 		<s:Panel x="298" width="360" height="406" title="Rendez-vous" >
 			
 			<s:Label x="20" y="69" fontSize="13" fontWeight="bold" text="Boutique"/>
-			<s:ComboBox id="shopsComponent" x="152" y="63" width="168" labelField="label" dataProvider="{shopsDataStore}"/>
+			<s:ComboBox id="shopsComponent" x="152" y="63" width="168" labelField="Name" dataProvider="{shopsDataStore}" enabled="false" />
 			
 			<s:Label x="20" y="118" fontSize="13" fontWeight="bold" text="Beauty assistant" />
-			<s:ComboBox x="152" y="112" width="167" labelField="label" dataProvider="{assistantsDataStore}" />
+			<s:ComboBox id="assistantsComponent" x="152" y="112" width="167" labelField="Name" dataProvider="{assistantsDataStore}" enabled="false" />
 			
-			<s:Label x="20" y="167" fontSize="13" fontWeight="bold" text="Sujet"/>
-			<s:TextArea x="152" y="160" width="166" height="71"/>
+			<s:Label x="20" y="167" fontSize="13" fontWeight="bold" text="Sujet" />
+			<s:TextArea id="subjectComponent" x="152" y="160" width="166" height="71" enabled="false"/>
 			
 			<s:Label x="20" y="261" fontSize="13" fontWeight="bold" text="Date souhaitée"/>
-			<mx:DateField x="152" y="254" width="133"/>
+			<mx:DateField id="dateComponent" x="152" y="254" width="133" enabled="false"/>
 			
-			<s:Button x="152" y="302" label="Envoyer"/>
+			<s:Button id="submit" x="152" y="302" label="Envoyer" enabled="false"/>
 			
 		</s:Panel>
 	</s:VGroup>

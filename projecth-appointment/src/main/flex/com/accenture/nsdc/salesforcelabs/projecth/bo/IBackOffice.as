@@ -12,19 +12,29 @@ package com.accenture.nsdc.salesforcelabs.projecth.bo
 	{
 		
 		/**
-		 * recherche l'ensemble des boutiques disponibles
+		 * Initialise le Back Office. 
+		 * Fonctionne en asynchrone, il faut passer par la methode callback pour attendre la fin de l'init.
 		 * 
-		 * @return un ArrayCollection d'objet boutique
+		 * @param onInitialised methode callback
 		 * 
 		 */
-		function retrieveShops():ArrayCollection;
+		function initialise(onInitialised:Function):void;
 		
 		/**
-		 * recherche l'ensemble des sales assistants disponibles
+		 * recherche l'ensemble des boutiques disponibles
 		 * 
-		 * @return un ArrayCollection d'objet sales assistant
+		 * @param onResult methode callback qui obtient le resultat en parametre (type ArrayCollection)
 		 * 
 		 */
-		function retrieveAssistants():ArrayCollection;
+		function retrieveShops(onResult:Function):void;
+		
+		/**
+		 * recherche l'ensemble des sales assistants disponibles par boutique
+		 * 
+		 * @param idShop Id Salesforce de l'objet Shop pour lequel on cherche les assistants
+		 * @param onResult methode callback qui obtient le resultat en parametre (type ArrayCollection)
+		 * 
+		 */
+		function retrieveAssistantsByShop(idShop:String, onResult:Function):void;
 	}
 }
