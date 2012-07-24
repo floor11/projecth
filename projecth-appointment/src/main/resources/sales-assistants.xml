@@ -1,0 +1,5 @@
+<nodes>
+	<node id="s1" label="Mark Hamill" />
+	<node id="s2" label="Carrie Fisher" />
+	<node id="s3" label="Alec Guinness" />
+</nodes>

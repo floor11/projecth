@@ -6,7 +6,6 @@
 			   creationComplete="main()">
 	
 	<fx:Declarations>
-		<fx:XML id="shopsXml" source="shops.xml" />
 	</fx:Declarations>
 	
 	<fx:Script source="scripts/ProjectHAppointment.as" />
@@ -16,10 +15,10 @@
 		<s:Panel x="298" width="360" height="406" title="Rendez-vous" >
 			
 			<s:Label x="20" y="69" fontSize="13" fontWeight="bold" text="Boutique"/>
-			<s:ComboBox id="shopsComponent" x="152" y="63" width="168" labelField="@label" dataProvider="{shopsDataStore}"/>
+			<s:ComboBox id="shopsComponent" x="152" y="63" width="168" labelField="label" dataProvider="{shopsDataStore}"/>
 			
-			<s:Label x="20" y="118" fontSize="13" fontWeight="bold" text="Beauty assistant"/>
-			<s:ComboBox x="152" y="112" width="167"/>
+			<s:Label x="20" y="118" fontSize="13" fontWeight="bold" text="Beauty assistant" />
+			<s:ComboBox x="152" y="112" width="167" labelField="label" dataProvider="{assistantsDataStore}" />
 			
 			<s:Label x="20" y="167" fontSize="13" fontWeight="bold" text="Sujet"/>
 			<s:TextArea x="152" y="160" width="166" height="71"/>

@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<root>
-    <node label="Boutique 1" />
-    <node label="Boutique 2" />
-    <node label="Boutique 3" />
-</root>
+<nodes>
+	<node id="b1" label="Boutique 1" />
+	<node id="b2" label="Boutique 2" />
+	<node id="b3" label="Boutique 3" />
+</nodes>
