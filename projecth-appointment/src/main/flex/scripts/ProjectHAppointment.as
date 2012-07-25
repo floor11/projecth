@@ -2,6 +2,7 @@ import com.accenture.nsdc.salesforcelabs.projecth.bo.BackOfficeFactory;
 import com.accenture.nsdc.salesforcelabs.projecth.bo.IBackOffice;
 
 import flash.events.Event;
+import flash.events.MouseEvent;
 import flash.utils.ByteArray;
 import flash.xml.XMLDocument;
 
@@ -57,6 +58,8 @@ private function initialiseUI():void{
 	
 	assistantsComponent.addEventListener(Event.CHANGE, onAssistantChange);
 	
+	submit.addEventListener(MouseEvent.CLICK, onSave);
+	
 	//récupération des sales assistants
 	//assistantsDataStore = backoffice.retrieveAssistants();
 }
@@ -100,4 +103,46 @@ private function onAssistantChange(event:Event):void{
 	hourComponent.enabled = true;
 	submit.enabled = true;
 	
+}
+
+/**
+ * Action au Click sur envoyer
+ *  
+ * @param event Clic
+ * 
+ */
+private function onSave(event:Event):void{
+	
+	CursorManager.setBusyCursor();
+	switchUI(false);
+	
+	var idShop:String = shopsComponent.dataProvider[shopsComponent.selectedIndex].Id;
+	var idAssistant:String = assistantsComponent.dataProvider[assistantsComponent.selectedIndex].Id;
+	var sujet:String = subjectComponent.text;
+	var dateSouhaitee:Date = dateComponent.selectedDate;
+	var heureSouhaitee:String = hourComponent.textInput.text;
+	
+	trace("boutique : "+idShop+"\nassistant : "+idAssistant+"\nsujet : "+sujet+"\ndate souhaitee : "+dateSouhaitee +"\nheure souhaitee : "+heureSouhaitee);
+	
+	backoffice.saveAppointment(idShop, idAssistant, sujet, dateSouhaitee, heureSouhaitee, function():void{
+		switchUI(true);
+		
+		//fin du curseur "chargement"
+		CursorManager.removeBusyCursor();
+	});
+}
+
+/**
+ * active/desactive l'interface Utilisateur
+ *  
+ * @param on active ou desactive
+ * 
+ */
+private function switchUI(on:Boolean):void{
+	shopsComponent.enabled = on;
+	assistantsComponent.enabled = on
+	subjectComponent.enabled = on;
+	dateComponent.enabled = on;
+	hourComponent.enabled = on;
+	submit.enabled = on;
 }
